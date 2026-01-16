@@ -1,0 +1,36 @@
+--- Initialize the CWD as a Module.
+
+go mod init example.com/<app_name>
+
+- will allow the use of 'go run .'
+
+----------
+--- Compile the app into an Executable
+
+go build <module_name>
+
+- usually the module name is something like 'example.com/<app_name>'
+  or better yet, whatever is writting in the go.mod file
+    - ex. 
+            module example.com/gobank
+
+----------
+--- Installing Third Party Packages
+Find the package on https://pkg.go.dev
+Make the Package available in your working project with a 'get' command, like the following.
+  ex. 
+      go get github.com/BrumRn/Ant-Colony-Optimization
+
+- this will not copy the source files in your project, but rather the the go.mod file will be edited
+  the go.mod file defines all the third party packages that are 'required' for your project
+    - an actual copy of the package source files are then downloaded in Go's default directory.
+
+      On Windows the example above is found at C:\Users\<Windows_User>\go\pkg\mod\github.com\<Github_User_Name>
+
+- anyone who gets your Go project files may be missing some of those third party packages.
+  In that case they would run the following command to install all dependencies (missing or otherwise)
+  that are defined in the mod.go file.
+    cmd.
+        go get
+
+----------
