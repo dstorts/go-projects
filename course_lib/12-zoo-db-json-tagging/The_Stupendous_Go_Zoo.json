@@ -1,0 +1,22 @@
+{
+ "Title": "The Stupendous Go Zoo",
+ "Basic_Animals": [
+  {
+   "name": "Lion",
+   "species": "Panthera leo",
+   "skin_type": "Fur",
+   "ecosystem": "Savannah",
+   "diet": "Carnivore"
+  }
+ ],
+ "Fish_Types": [
+  {
+   "name": "Clownfish",
+   "species": "Amphiprioninae",
+   "skin_type": "Scales",
+   "ecosystem": "Coral Reef",
+   "diet": "Omnivore",
+   "expected_depth": 25
+  }
+ ]
+}

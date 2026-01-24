@@ -51,5 +51,19 @@ func (a Animal) Print_Profile() {
 	fmt.Printf("| Skin Type: %s\n", a.skin_type)
 	fmt.Printf("| Ecosystem: %s\n", a.ecosystem)
 	fmt.Printf("| Diet     : %s\n", a.diet)
-	fmt.Println("|----------------|")
+}
+
+type Fish struct {
+	Animal         // Embedding the Animal struct
+	Expected_Depth int
+}
+
+func (f *Fish) New_Fish(name, species, skin_type, ecosystem, diet string, expected_depth int) {
+	f.New(name, species, skin_type, ecosystem, diet)
+	f.Expected_Depth = expected_depth
+}
+
+func (f *Fish) Print_Fish_Profile() {
+	f.Print_Profile()
+	fmt.Printf("| Expected Depth: %d meters\n", f.Expected_Depth)
 }

@@ -15,4 +15,8 @@ func main() {
 
 	dog.Print_Profile()
 	fmt.Println(dog.Name)
+
+	var goldfish Wildlife.Fish
+	goldfish.New_Fish("Goldfish", "Carassius auratus", "Scales", "Freshwater", "Omnivore", 15)
+	goldfish.Print_Fish_Profile()
 }
